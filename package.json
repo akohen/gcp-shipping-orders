@@ -1,0 +1,67 @@
+{
+  "name": "gcp-shipping-orders",
+  "version": "1.0.0",
+  "description": "Backend service for tracking orders. Part of the GCP tutorial series",
+  "main": "index.js",
+  "scripts": {
+    "dev": "babel-watch src/index.js",
+    "start": "node dist/index.js",
+    "build": "npx babel src -d dist --ignore 'src/**/*.test.js'",
+    "test": "npx jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akohen/gcp-shipping-orders.git"
+  },
+  "author": "Alexandre KOHEN",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/akohen/gcp-shipping-orders/issues"
+  },
+  "homepage": "https://github.com/akohen/gcp-shipping-pricing#readme",
+  "dependencies": {
+    "@google-cloud/datastore": "^3.1.2",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-watch": "^7.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "jest": "^24.7.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "rules": {
+      "no-console": "off"
+    },
+    "overrides": [
+      {
+        "files": [
+          "src/*.test.js"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
+  },
+  "eslintIgnore": [
+    "dist/*"
+  ]
+}

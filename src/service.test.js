@@ -8,6 +8,6 @@ describe('Orders service', () => {
         { setHeader: () => {}, send: v => resolve(v) },
       );
     });
-    expect(JSON.parse(result)).toEqual([]);
+    expect(JSON.parse(result)[0].from).toEqual('earth');
   });
 });

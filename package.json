@@ -4,7 +4,7 @@
   "description": "Backend service for tracking orders. Part of the GCP tutorial series",
   "main": "index.js",
   "scripts": {
-    "dev": "babel-watch src/index.js",
+    "dev": "GOOGLE_APPLICATION_CREDENTIALS=service.keys.json babel-watch src/index.js",
     "start": "node dist/index.js",
     "build": "npx babel src -d dist --ignore 'src/**/*.test.js'",
     "test": "npx jest"
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/akohen/gcp-shipping-pricing#readme",
   "dependencies": {
     "@google-cloud/datastore": "^3.1.2",
+    "body-parser": "^1.18.3",
     "express": "^4.16.4"
   },
   "devDependencies": {

@@ -9,5 +9,7 @@ export function Datastore() {
       'send-date': '2019-04-18T10:59:00.000Z',
       from: 'earth',
     }]],
+    save: async o => [o],
+    key: e => [e],
   };
 }
